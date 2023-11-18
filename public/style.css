@@ -1,0 +1,212 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+   
+}
+
+canvas{
+    background-image: radial-gradient(rgba(0, 0, 0, 0.39), rgba(2, 2, 129, 0.452));
+}
+
+.super-parent{
+    height: auto;
+}
+
+.options-cont{
+    cursor: pointer;
+    animation-name: appear;
+    animation-duration: 1s;
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+    width: 5rem;
+    background-color: lightgray;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.options-cont>*{
+    font-size: xx-large;
+}
+
+.tools-cont{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 5rem;
+    width: 50rem;
+    position: absolute;
+    top: 2rem;
+    left: 10rem;
+    background-color: lightgray;
+    border-radius: 10px;
+    animation-name: appear;
+    animation-duration: 1s;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+@keyframes appear {
+    0%{
+        transform: scale(0.1);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+.tools-cont>*{
+    height: 50px;
+    color: rgb(59, 104, 0);
+    cursor: pointer;
+}
+
+.pencil-tool-cont{
+    height: 6rem;
+    width: 7rem;
+    background-color: lightgray;
+    padding: 2px;
+    position: absolute;
+    top:8rem;
+    left: 10rem;
+    border-radius: 10px;
+    display: none;
+}
+.pencil-width-cont{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid black;
+    height: 30%;
+}
+.pencil-width-cont>*{
+    width: 98%;
+}
+
+.pencil-color-cont{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 74%;
+    border-top: 2px solid black;
+}
+
+.pencil-color-cont>*{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+}
+
+.black-pencil{
+    background-color: black;
+}
+.red-pencil{
+    background-color: rgb(197, 2, 2);
+}
+.blue-pencil{
+    background-color: blue;
+}
+
+.eraser-tool-cont{
+    display: flex;
+    align-items: center;
+    height: 2rem;
+    width: 7rem;
+    background-color: lightgray;
+    padding: 2px;
+    position: absolute;
+    top:8rem;
+    left: 18rem;
+    border-radius: 10px;
+    display: none;
+}
+.eraser-tool-cont>*{
+    width: 98%;
+}
+
+.sticky-cont{
+    background-color: transparent;
+    height: 15rem;
+    width: 15rem;
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    padding: 5px;
+    border-radius: 20px;
+    /* z-index: 0; */
+}
+.header-cont{
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 20%;
+    background-color: lightgray;
+    margin: 2px;
+    border: 2px solid black;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+
+}
+.header-cont>*{
+    border: 1px solid black;
+    height: 20px;
+    width: 20px;
+    margin-right: 20px;
+    background-color: black;
+    border-radius: 50%;
+}
+.minimize{
+    background-color: green;
+}
+.remove{
+    background-color: rgb(192, 7, 7);
+}
+.note-cont{
+    border: 2px solid black;
+    height: 78%;
+    margin: 2px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-color: lightgray;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.note-cont>*{
+    height: 98%;
+    width: 100%;
+    background-color: transparent;
+    outline: none;
+    resize: none;
+    padding: 10px;
+    border: none;
+}
+
+/* textarea{
+    height: 98%;
+    width: 100%;
+    background-color: transparent;
+    outline: none;
+    resize: none;
+    padding: 10px;
+    border: none;
+} */
+
+.disappear{
+    animation-name: faint;
+    animation-duration: 1s;
+}
+
+@keyframes faint {
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(0);
+    }
+}
